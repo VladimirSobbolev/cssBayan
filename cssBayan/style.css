@@ -19,6 +19,7 @@ body {
 /*meme*/
 
 .meme {
+    margin-bottom: 20px;
     border-top: 1px solid grey;
 }
 
