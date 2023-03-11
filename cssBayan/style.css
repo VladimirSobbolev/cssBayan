@@ -1,3 +1,67 @@
+/*main set*/
+
 body {
-    background: gray;
+    background: lightgrey;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
 }
+
+.container {
+    max-width: 90vw;
+    margin: 0 auto;
+    padding: 0.5rem;
+}
+
+.title {
+    margin: 1rem;
+    font-size: 2em;
+}
+
+/*meme*/
+
+.meme {
+    border-top: 1px solid grey;
+}
+
+.meme__title {
+    padding: 0.5em;
+    background-image: url("./icon/cross-2.png");
+    color: mediumblue;
+    background-size: 2em;
+    background-repeat: no-repeat;
+    background-position: center right;
+    transition-property: color, background-image;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+}
+
+.meme__label {
+    display: block;
+    /*color: mediumblue;*/
+    font-size: 16px;
+    max-width: 80vw;
+}
+
+.meme__input {
+    appearance: none;
+}
+
+.meme__img {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    display: none;
+}
+
+/*meme logics*/
+
+.meme__input:checked ~ .meme__img {
+    display: block;
+}
+
+.meme__input:checked ~ .meme__title {
+    color: black;
+    background-image: url("./icon/cross.png");
+}
+
+
+
