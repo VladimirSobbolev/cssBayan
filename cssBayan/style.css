@@ -36,7 +36,6 @@ body {
 
 .meme__label {
     display: block;
-    /*color: mediumblue;*/
     font-size: 16px;
     max-width: 80vw;
 }
@@ -50,6 +49,11 @@ body {
     height: auto;
     margin: 0 auto;
     display: none;
+}
+
+.meme__picture {
+    display: block;
+    margin: 0 auto;
 }
 
 /*meme logics*/
