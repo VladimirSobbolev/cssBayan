@@ -47,9 +47,11 @@ body {
 
 .meme__img {
     width: 80%;
-    height: auto;
     margin: 0 auto;
-    display: none;
+    transition: opacity 1s ease;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
 }
 
 .meme__picture {
@@ -61,12 +63,16 @@ body {
 
 .meme__input:checked ~ .meme__img {
     display: block;
+    opacity: 1;
+    height: auto;
 }
 
 .meme__input:checked ~ .meme__title {
     color: black;
     background-image: url("./icon/cross.png");
 }
+
+
 
 
 
