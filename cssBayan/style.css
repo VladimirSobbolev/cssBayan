@@ -19,7 +19,7 @@ body {
 
 .meme {
     margin-bottom: 1em;
-    border-top: 1px solid grey;
+    border-top: 0.08rem solid grey;
 }
 
 .meme__title {
@@ -45,7 +45,7 @@ body {
 .label__img {
     display: block;
     width: 50%;
-    margin: 40px auto 0;
+    margin: 2em auto 0;
     opacity: 0;
     height: 0;
     overflow: hidden;
@@ -96,7 +96,7 @@ body {
 
 @media  (min-width: 820px) {
     html {
-        font-size: 20px;
+        font-size: 1.4em;
     }
     .meme__title {
         padding: 0.5em;
@@ -107,7 +107,7 @@ body {
 
 @media (min-width: 1020px) {
     html {
-        font-size: 30px;
+        font-size: 2em;
     }
 
     .container {
