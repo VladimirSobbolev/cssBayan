@@ -114,6 +114,10 @@ body {
         width: 70vw;
     }
 
+    .meme__label {
+        cursor: pointer;
+    }
+
     .meme__title {
         background-image: none;
     }
