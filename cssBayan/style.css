@@ -1,0 +1,161 @@
+/*main set*/
+
+body {
+    background: lightgrey;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.container {
+    max-width: 90vw;
+    margin: 0 auto;
+    padding: 0.5rem;
+}
+
+.title {
+    margin: 1rem;
+}
+
+/*meme*/
+
+.meme {
+    margin-bottom: 1em;
+    border-top: 0.08rem solid grey;
+}
+
+.meme__title {
+    padding: 0.5em 2em;
+    background-image: url("./icon/cross-2.png");
+    color: mediumblue;
+    background-size: 2em;
+    background-repeat: no-repeat;
+    background-position: top right;
+    transition-property: color, background-image;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+}
+
+
+.meme__label {
+    display: block;
+    font-size: 1em;
+    max-width: 90vw;
+
+}
+
+.label__img {
+    display: block;
+    width: 50%;
+    margin: 2em auto 0;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: opacity 2s ease;
+}
+
+.meme__input {
+    appearance: none;
+}
+
+
+
+.meme__picture {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    opacity: 0;
+    transition: opacity 2s ease;
+}
+
+/*meme logics*/
+
+.meme__img {
+    width: 80%;
+    margin: 0 auto;
+    height: 0;
+    overflow: hidden;
+}
+
+
+.meme__input:checked ~ .meme__img {
+    /*display: block;*/
+    height: auto;
+}
+
+.meme__input:checked ~ .meme__img > .meme__picture {
+    opacity: 1;
+}
+
+.meme__input:checked ~ .meme__title {
+    color: black;
+    background-image: url("./icon/cross.png");
+}
+
+
+/*media tablet*/
+
+@media  (min-width: 820px) {
+    html {
+        font-size: 1.4em;
+    }
+    .meme__title {
+        padding: 0.5em;
+    }
+}
+
+/*media desktop */
+
+@media (min-width: 1020px) {
+    html {
+        font-size: 2em;
+    }
+
+    .container {
+        width: 70vw;
+    }
+
+    .meme__label {
+        cursor: pointer;
+    }
+
+    .meme__title {
+        background-image: none;
+    }
+
+    .meme__img {
+        width: 50%;
+    }
+
+    .container:hover > .meme > .meme__title {
+        background-image: url("./icon/cross-2.png");
+    }
+
+    .container:hover > .meme > .meme__input:checked ~ .meme__title {
+        color: black;
+        background-image: url("./icon/cross.png");
+    }
+
+    .meme__input:checked ~ .meme__img {
+        display: none;
+    }
+
+    .meme__input:hover + .meme__title > .meme__label > .label__img {
+        display: block;
+        opacity: 1;
+        height: auto;
+    }
+
+    .meme__input:checked + .meme__title > .meme__label > .label__img {
+        display: block;
+        height: auto;
+        opacity: 1;
+    }
+
+
+
+
+}
+
+
+
+
